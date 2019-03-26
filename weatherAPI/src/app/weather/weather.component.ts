@@ -40,7 +40,6 @@ export class WeatherComponent implements OnInit {
       })
       .catch(err => console.log(err));
     this.txtCityName = '';
-    console.log(this.weather);
   }
   returnString() {
     return this.cityName === '' ? 'Weather in your city. Wacth now!' : `${this.cityName + ', ' + this.country} temporary is now ${this.temp} °C <br/> 
