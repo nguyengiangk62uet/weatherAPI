@@ -1,0 +1,105 @@
+<body id="page-top">
+
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">THỜI TIẾT HÔM NAY</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#about">Giới thiệu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#services">Dịch vụ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#contact">Liên hệ</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="bg-primary text-white">
+    <div class="container text-center">
+      <b>!------Current weather and forecasts in your city------!</b>
+      <h1 [innerHTML]="returnString()" style="color: greenyellow;"></h1>
+      <input placeholder="Enter your city name" [(ngModel)]="txtCityName" style="border-radius: 2px;"
+        (keydown.enter)="getWeather()">
+      <br><br>
+      <button (click)="getWeather()" style="border-radius: 4px;">Get weather</button>
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>Giới thiệu về trang web</h2>
+          <p class="lead">
+            API mở cho các nhà phát triển giúp dễ dàng nhúng thông tin thời tiết vào nhiều ứng dụng bao gồm ứng dụng
+            thời tiết trên web và di động, giải pháp cho bảo hiểm, quảng cáo, nông nghiệp, thể thao và nhiều ứng dụng
+            khác. Đối với những người chỉ muốn biết điều kiện thời tiết cho vị trí của họ, chúng tôi cung cấp thời tiết,
+            dự báo, bản đồ hiện tại và rất nhiều biểu đồ trên trang web của chúng tôi một cách công khai.
+          </p>
+          <ul>
+            <li>Truy cập dữ liệu thời tiết hiện tại cho bất kỳ vị trí nào, bao gồm hơn 200.000 thành phố</li>
+            <li>Thời tiết hiện tại được cập nhật thường xuyên dựa trên các mô hình và dữ liệu toàn cầu từ hơn 40.000
+              thời tiết trạm</li>
+            <li>Dữ liệu có sẵn ở định dạng JSON, XML hoặc HTML</li>
+            <li>Có sẵn miễn phí và tất cả các tài khoản trả phí khác</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>Dịch vụ chúng tôi cung cấp</h2>
+          <p class="lead">Dịch vụ thời tiết OpenWeatherMap dựa trên nền tảng khoa học dữ liệu không gian địa lý của VANE
+            để thu thập, xử lý và phân phối thông tin về hành tinh của chúng ta thông qua các công cụ và API dễ sử dụng.
+            <br>
+            Liên tục cập nhật tình hình thời tiết sử dụng công nghệ mới nhất hiện nay.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>Liên hệ chúng tôi</h2>
+          <p class="lead">© 2017 Trường Đại học Công nghệ, Đại học Quốc Gia Hà Nội <br>
+            Địa chỉ: E3, 144 Xuân Thủy, Cầu Giấy, Hà Nội <br>
+            Điện thoại: 024.37547.461; Fax: 024.37547.460; Email: uet@vnu.edu.vn</p>
+          <a href="https://www.youtube.com/watch?v=tt2k8PGm-TI&list=RDkTJbE3sfvlI&index=2">Facebook</a>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Đại học Công Nghệ 2019</p>
+    </div>
+
+    <!-- /.container -->
+  </footer>
+
+
+
+
+
+</body>
