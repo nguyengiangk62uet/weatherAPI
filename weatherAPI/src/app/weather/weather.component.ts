@@ -22,6 +22,9 @@ export class WeatherComponent implements OnInit {
   humidity = null;
   country = '';
   weather = '';
+  feel_like = null;
+  temp_max = null;
+  temp_min = null;
   getWeather() {
     this.weatherService.getTemp(this.txtCityName)
       .then(temp => {
@@ -29,6 +32,9 @@ export class WeatherComponent implements OnInit {
         this.cityName = this.txtCityName;
         try {
           this.temp = temp['main'].temp;
+          this.feel_like = temp['main'].feels_like;
+          this.temp_min = temp['main'].temp_min;
+          this.temp_max = temp['main'].temp_max;
           this.humidity = temp['main'].humidity;
           this.cityName = temp['name'];
           this.country = temp['sys'].country;
@@ -42,7 +48,9 @@ export class WeatherComponent implements OnInit {
     this.txtCityName = '';
   }
   returnString() {
-    return this.cityName === '' ? 'Weather in your city. Wacth now!' : `${this.cityName + ', ' + this.country} temporary is now ${this.temp} °C <br/> 
+    return this.cityName === '' ? 'Weather in your city. Wacth now!' : `${this.cityName + ', ' + this.country} temporary is now ${this.temp} °C <br/>
+    Temporary min: ${this.temp_min} °C - Temporary max: ${this.temp_max} °C </br>
+    Feels like: ${this.feel_like} °C </br>
     Humidity: ${this.humidity} % <br/> Weather: ${this.weather}`;
   }
 }

@@ -134,5 +134,8 @@
       }
     }
   },
-  "defaultProject": "weatherAPI"
+  "defaultProject": "weatherAPI",
+  "cli": {
+    "analytics": "9da96703-f261-4b98-a879-0b88c1ea7b38"
+  }
 }
